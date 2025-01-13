@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +31,6 @@ body {
   overflow: hidden;
 }
 
-
 h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -40,7 +38,7 @@ h1 {
   color: #333;
 }
 
-
+/* Rows per page layout */
 .rows-per-page {
   margin-bottom: 20px;
   display: flex;
@@ -60,11 +58,23 @@ h1 {
   border: 1px solid #ddd;
 }
 
+/* Layout for Rows per page on smaller screens */
+@media (max-width: 768px) {
+  .rows-per-page {
+    flex-direction: column; /* Stack vertically on smaller screens */
+    align-items: center; /* Center the content */
+  }
+
+  .rows-per-page select {
+    width: 100%; /* Full width select box on mobile */
+    margin-bottom: 10px; /* Space between label and select box */
+  }
+}
+
 /* Table Container */
 .table-container {
   margin-bottom: 20px;
   overflow-x: auto;
-  
 }
 
 /* Table */
@@ -120,17 +130,15 @@ tr:hover {
   background-color: #f1c40f;
 }
 
-
+/* Pagination */
 .pagination {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
   margin: 20px auto;
   max-width: 90%;
 }
-
 
 .pagination button {
   width: 40px;
@@ -160,7 +168,6 @@ tr:hover {
   color: #7f8c8d;
   cursor: not-allowed;
 }
-
 
 .pagination button.active {
   background-color: #3498db;
@@ -192,18 +199,18 @@ tr:hover {
   cursor: not-allowed;
 }
 
+/* Sorting */
 .sort-arrow {
   display: inline-block;
   margin-left: 8px;
   font-size: 1rem;
 }
 
-
-
 .sort-arrow.default {
   color: #ccc;
 }
 
+/* Rows per page select box container */
 .rows-per-page-container {
   display: flex;
   justify-content: center;
@@ -239,10 +246,8 @@ tr:hover {
   border-color: #3498db;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
-.rows-per-page-layout{
-  display:flex;
-}
 
+/* Loading, Error, No Data */
 .loading-container,
 .error-container,
 .no-data-container {
@@ -297,13 +302,28 @@ button:hover {
   100% { transform: rotate(360deg); }
 }
 
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
 
   .pagination {
-    flex-direction: column;
-    gap: 12px;
+    flex-wrap: nowrap; /* Pagination stays horizontal even on small screens */
+    gap: 8px;
+  }
+  
+  .rows-per-page {
+    flex-direction: column; /* Stack vertically on smaller screens */
+    align-items: center; /* Center the content */
+  }
+
+  .rows-per-page select {
+    width: 100%; /* Full width select box on mobile */
+    margin-bottom: 10px; /* Space between label and select box */
+  }
+
+  .pagination button {
+    width: auto; /* Pagination buttons remain their size */
   }
 }

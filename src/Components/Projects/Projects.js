@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import useFetch from "../../Hooks/usefetch";
 import Table from "../Table/Table";
 import Pagination from "../Pagination/Pagination";
+import Loading from "../Loading/Loading";
+import Error from "../Error/Error";
+import NoProjects from "../NoProject/NoProjects";
+import RowsPerPageSelect from "../RowsPerPage/RowsPerPage";
 
 const API_URL =
   "https://raw.githubusercontent.com/saaslabsco/frontend-assignment/refs/heads/master/frontend-assignment.json";
@@ -65,32 +69,15 @@ function Projects() {
   );
 
   if (loading) {
-    return (
-      <div className="loading-container">
-        <div className="spinner"></div>
-        <p>Loading projects...</p>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {
-    return (
-      <div className="error-container">
-        <div className="error-icon"></div>
-        <p>Error fetching data: {error}</p>
-        <button onClick={() => window.location.reload()}>Retry</button>
-      </div>
-    );
+    return <Error message={error} onRetry={() => window.location.reload()} />;
   }
 
   if (projects.length === 0) {
-    return (
-      <div className="no-data-container">
-        <div className="no-data-icon"></div>
-        <p>No projects available at the moment.</p>
-        <button onClick={() => window.location.reload()}>Reload</button>
-      </div>
-    );
+    return <NoProjects onReload={() => window.location.reload()} />;
   }
 
   return (
@@ -103,19 +90,10 @@ function Projects() {
       />
 
       <div className="rows-per-page-layout">
-        <div className="rows-per-page-container">
-          <label htmlFor="rows-per-page">Rows per page:</label>
-          <select
-            id="rows-per-page"
-            value={recordsPerPage}
-            onChange={handleRowsPerPageChange}
-          >
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-          </select>
-        </div>
-
+        <RowsPerPageSelect
+          value={recordsPerPage}
+          onChange={handleRowsPerPageChange}
+        />
         <Pagination
           totalPages={totalPages}
           currentPage={currentPage}
