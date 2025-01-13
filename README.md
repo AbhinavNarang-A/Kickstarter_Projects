@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+### Kickstarter Projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Features:
 
-In the project directory, you can run:
+1.Projects Table View:
+-Display a table view of Projects with S.no,Percentage Funded,Amount Pledged as Columns.
 
-### `npm start`
+2.Pagination:
+-Added client side Pagination for user friendly navigation to a particular page
+-Sort tasks by due date (ascending/descending).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3.Column Level Sorting:
+-User can do column level Sorting (ascending/descending).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4.Maximum Rows Per Page:
+-By default user can see only 5 rows per page, but can also change it to 10,15 according to prefrence
 
-### `npm test`
+5.Accessibility:
+-Ensures the app is usable by everyone, including those with disabilities.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6.Unit Testing:
+-Unit tests for core components using a testing library (e.g., Jest, React Testing Library).
 
-### `npm run build`
+### Installation and Running the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Prerequisites:
+You need Node.js and npm (or yarn) installed on your machine.
+A GitHub account for accessing the GitHub API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Step-by-Step Instructions:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the Repository:
+   Step 1: Clone the Repository
+   Open your terminal (or command prompt).
+   Run the following command to clone the repository from GitHub:
+   ## git clone https://github.com/AbhinavNarang-A/Kickstarter_Projects.git
 
-### `npm run eject`
+2. Step 2: Navigate to the Project Directory
+   After the repository is cloned, navigate to the project folder by using the cd command:
+   ## cd Kickstarter_Projects
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Step 3: Install Dependencies
+   Run the following command to install all the required dependencies:
+   ## npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Step 4: Run the App
+   Run the following command to start the development server:
+   ## npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Step 5: Run Tests
+   To ensure everything is working correctly, you can run the tests by executing:
+   ## npm test
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Live Project
+https://kickstarter-projects-pi.vercel.app/
