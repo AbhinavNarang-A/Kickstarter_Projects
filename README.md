@@ -53,4 +53,4 @@ Step-by-Step Instructions:
    ## npm test
 
 ### Live Project
-[https://www.loom.com/share/ab26d857c27e4ba6a54a8288e6049210?sid=3df488e0-1169-46a2-97e7-2ec719d891d3](https://kickstarter-projects-pi.vercel.app/)
+https://kickstarter-projects-pi.vercel.app/
